@@ -1,0 +1,29 @@
+.content{
+    width: 100%;
+}
+
+.mdl-cell{
+    margin:auto;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    width: 90%;
+    /*animation: fadein .5s;*/
+}
+
+.moderatebutton{
+    margin: 10px;
+}
+
+.ul{
+    margin:0;
+    padding: 0;
+}
+
+#spinner{ /*this is not centered*/
+    position: absolute;
+    bottom: 50%;
+    left: 47vw;
+    animation: fadein .5s;
+}

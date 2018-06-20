@@ -1,0 +1,127 @@
+/*********  COMMON  *********/
+html, body{
+    overflow-x: hidden; !important;
+    position:relative; !important;
+}
+
+.content{
+    width: 100%;
+}
+
+#spinner{ /*this is not centered*/
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    animation: fadein .5s;
+}
+
+.mdl-cell{
+    margin:auto;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    /*animation: fadein .5s;*/
+}
+
+div ul, div ol{
+    margin-top: -16px;
+}
+
+ul ul, ul ol, ol ul, ol ol{
+    margin-top: 0px;
+}
+
+p img{
+    width: 75%;
+    margin: 32px auto 32px auto;
+    display: block;
+}
+
+.subjectchip{
+  float: right;
+  display: block;
+  margin-top: 18px;
+  height: 35px;
+  line-height: 37px;
+  background: rgb(0,150,136);
+  color: white;
+}
+
+.subjectchip .mdl-chip__text{
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.fab{
+    position: fixed;
+    display: block;
+    right: 30px;
+    bottom: 14px;
+    color: white;
+    background: #e7e7e7;
+    transition: 0.5s ease-in-out;
+}
+
+.fab:hover{
+    background: #e7e7e7;
+}
+
+.fabactive{
+    color:red;
+}
+
+.mdl-button--fab.mdl-button--colored{
+    color:white;
+}
+
+#editbutton, #printbutton{
+    margin-top: 16px;
+    margin-right: 16px;
+}
+
+blockquote:before,  blockquote:after{
+    display: none;
+}
+
+/*********  MOBILE  *********/
+
+h1{
+    margin-top: 0;
+    font-size: 42px;
+}
+
+h2{
+    font-size: 36px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+/*********  PC  *********/
+
+@media (max-resolution: 1dppx) {
+    .fab{
+      bottom: 50px;
+    }
+    .fab:hover{
+        color:red;
+    }
+
+    h1{
+        margin-top: 0;
+        font-size: 50px;
+    }
+    h2{
+        font-size: 42px;
+    }
+    h3{
+        font-size: 34px;
+    }
+
+    p img{
+        width: 85%;
+    }
+}
+

@@ -1,0 +1,69 @@
+.card{
+    margin: 16px;
+    width: 300px;
+    min-height: 120px;
+    max-height: 200px;
+    text-decoration: none;
+    object-fit: contain;
+
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+    transition: all 0.3s ease-in-out;
+  
+    display: flex;
+}
+
+.card a{
+    height: 100%;
+    flex:1;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.3), 0 3px 30px 0 rgba(0,0,0,.24), 0 6px 12px -3px rgba(0,0,0,.4);
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    min-height: 90%;
+    padding-bottom:0px;
+}
+
+.mdl-card{
+    border-radius: 4px;
+}
+
+.mdl-card__title{
+    padding: 16px 16px 4px 16px; /*top right bot left*/
+}
+
+.mdl-card__supporting-text{
+    padding: 4px 16px 16px 16px;
+}
+
+.card a .mdl-chip {
+  margin-left: 12px;
+  height: 28px;
+  line-height: 28px;
+  background: rgb(0, 150, 136);
+  color: white;
+  cursor: pointer;
+}
+
+#spinner{
+    margin-top: 40vh;
+    animation: fadein .5s;
+}
+
+#loginplscell
+{
+    margin-top: 32px;
+    /*height: 200px;*/
+    padding: 16px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<title>Firebase wiki</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-indigo.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> 
+
+<link rel="stylesheet" href="./styles/common.css" />
+<link rel="stylesheet" href="./styles/moderate.css" />
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="362931064393-01nrv9mq1nd5cgo7iuahah42mefun06t.apps.googleusercontent.com"> -->
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+<script>
+    $(function() {
+        $('form').each(function() {
+            $(this).find('input').keypress(function(e) {
+                // Enter pressed?
+                if(e.which == 10 || e.which == 13) {
+                    this.form.submit();
+                }
+            });
+
+            $(this).find('input[type=submit]').hide();
+        });
+    });
+
+    // Initialize Firebase
+    var config = {
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: ""
+    };
+    firebase.initializeApp(config);
+</script>
+</head>
+
+
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title"><a href="./">Firebase Wiki</a></span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <button class="signinbtn mdl-button mdl-js-button mdl-button--raised 
+                    mdl-js-ripple-effect" onclick="signIn()">
+                    <img class="loginlogo" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Google-favicon-2015.png/150px-Google-favicon-2015.png"/>
+                        Sign in</button>
+                <button class="signoutbtn mdl-button mdl-js-button mdl-button--raised 
+                        mdl-js-ripple-effect" hidden onclick="signOut()"><img class="userpic" src=""/>Sign out</button>
+                <!--<a class="mdl-navigation__link" href="./">Home</a>-->
+            </nav>
+            <div class="mainsearch mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+              <label class="mdl-button mdl-js-button mdl-button--icon"
+                     for="fixed-header-drawer-exp"><i class="material-icons">search</i></label>
+              <div class="mdl-textfield__expandable-holder">
+                <form action="index.html">
+                  <input class="mdl-textfield__input" type="text" name="search" id="fixed-header-drawer-exp">
+                </form>
+              </div>
+            </div>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Firebase Wiki</span>
+            <button class="signinbtn mdl-button mdl-js-button mdl-button--raised 
+                mdl-js-ripple-effect" onclick="signIn()">
+                <img class="loginlogo" 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Google-favicon-2015.png/150px-Google-favicon-2015.png"/>
+                    Sign in</button>
+            <button class="signoutbtn mdl-button mdl-js-button mdl-button--raised 
+                    mdl-js-ripple-effect" hidden onclick="signOut()"><img class="userpic" src=""/>Sign out</button>
+            <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="./">Home</a>
+            <a class="mdl-navigation__link" href="contribute.html">Contribute</a>
+            <a class="mdl-navigation__link" href="">Feedback</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content">
+        <div class="content" id="content">
+
+            <div id="spinner"><div class="mdl-spinner mdl-js-spinner is-active" ></div></div>
+            
+
+            <div id="contentcell" class="mdl-color--white mdl-shadow--8dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col" hidden>
+            
+                <ul class="mdl-list" id="filelist">
+                </ul>
+                  
+            </div>
+
+            <div id="editcell" class="mdl-color--white mdl-shadow--8dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col" hidden>
+            
+                <ul class="mdl-list" id="editlist">
+                </ul>
+                  
+            </div>
+
+            <div id="loginplscell" class="mdl-color--white mdl-shadow--8dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col" hidden>
+                <h3 style="text-align:center; margin:0;">Only wiki moderators can moderate!</h3>
+            </div>
+
+            <div class="footer-mobile"><p>Made by Zsombor Szabó</p></div>
+        
+        </div>
+
+        </main>
+        <div class="footer">Made by Zsombor Szabó</div>
+        
+    </div>
+
+    <script src="scripts/utils.js?v=1"></script>
+    <script src="scripts/moderate.js?v=1"></script>
+    
+</body>
+</html>

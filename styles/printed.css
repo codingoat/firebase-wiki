@@ -1,0 +1,27 @@
+body{
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+p, ul{
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Product sans', sans-serif;
+}
+
+#header{
+    font-size: 16px;
+}
+
+div ul, div ol{
+    margin-top: -16px;
+}
+
+ul ul, ul ol, ol ul, ol ol{
+    margin-top: 0px;
+}
+
+#editbutton, #printbutton, #subjectlink{
+    display: none;
+}
