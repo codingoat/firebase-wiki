@@ -23,14 +23,14 @@ firebase.auth().onAuthStateChanged((user) => {
 
         firebase.database().ref("content-edit").on("value", function (snapshot) {
             loadEdits(snapshot);
+            });
 
-            //load pending
-            firebase.database().ref("content").on("value", function (snapshot) {
-                document.getElementById("loginplscell").hidden = true;
-                let allfiles = snapshot.toJSON();
-                firebase.database().ref("content-directory").on("value", function (snapshot2) {
-                    loadPending(allfiles, snapshot2);
-                });
+        //load pending
+        firebase.database().ref("content").on("value", function (snapshot) {
+            document.getElementById("loginplscell").hidden = true;
+            let allfiles = snapshot.toJSON();
+            firebase.database().ref("content-directory").on("value", function (snapshot2) {
+                loadPending(allfiles, snapshot2);
             });
 
             if (isMobile) {

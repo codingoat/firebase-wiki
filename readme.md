@@ -8,8 +8,7 @@ You can use a free Google account to deploy this page to Firebase Hosting. It us
 
 This was my first proper web project, so its often *hacky* or *weird*. I still think this project is a good starting point for seeing how FRD actually works.  
 
-
-### Stuff you need to set up
+## Stuff you need to set up
 
 **.firebaserc**
 
@@ -21,6 +20,8 @@ This was my first proper web project, so its often *hacky* or *weird*. I still t
         projectId: "",
         storageBucket: "",
         messagingSenderId: ""
+        
+You can get these from your Firebase console - Settings - General - add Firebase to your web app.
 
 **In your firebase database rules:**
 
@@ -48,3 +49,11 @@ This was my first proper web project, so its often *hacky* or *weird*. I still t
         }
 
 You can easily find your accounts UID by logging in and visiting the Firebase Authentication page in the Firebase console.
+
+**Create a 'content-directory' folder in your database root and put a dummy object in it (you can delete it later).**
+
+**Rewrite the page url at article.js:51. Without hardcoding the url the page throws a 'too many redirects' error. 
+
+### Default configuration
+
+The default config points to my example database.
