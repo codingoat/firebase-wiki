@@ -7,6 +7,7 @@ This is a simple and lightweight wiki with support for user editing and moderati
 You can use a free Google account to deploy this page to Firebase Hosting. It uses the Firebase Realtime Database service for storing data.
 
 This was my first proper web project, so its often *hacky* or *weird*. I still think this project is a good starting point for seeing how FRD actually works.  
+This was my first proper web project, so it's often *hacky* or *weird*. I still think this project is a good starting point for seeing how FRD actually works.  
 
 ## Stuff you need to set up
 
@@ -56,4 +57,4 @@ You can easily find your accounts UID by logging in and visiting the Firebase Au
 
 ### Default configuration
 
-The default config points to my example database.
+The default config points to my example database.The default config points to my example database.
